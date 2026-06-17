@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-inner">
-        <Link to="/" className="logo">우리 커뮤니티</Link>
+        <Link to="/" className="logo">행복은행</Link>
         <nav className="nav">
           <Link
             to="/notice"
