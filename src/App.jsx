@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { BoardProvider } from './context/BoardContext'
 import Header from './components/Header'
+import HomePage from './pages/HomePage'
 import NoticePage from './pages/NoticePage'
 import FreeBoardPage from './pages/FreeBoardPage'
 import PostDetailPage from './pages/PostDetailPage'
@@ -14,7 +15,7 @@ function App() {
         <Header />
         <main className="main">
           <Routes>
-            <Route path="/" element={<Navigate to="/notice" replace />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/notice" element={<NoticePage />} />
             <Route path="/notice/:id" element={<PostDetailPage board="notice" />} />
             <Route path="/free" element={<FreeBoardPage />} />
